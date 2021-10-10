@@ -1,0 +1,27 @@
+#include <stdio.h>
+
+int main()
+{ char num[5000];
+  int test=0,i;
+  
+  printf("Enter a number:");
+  scanf("%s",num);
+  
+  for(i=0;num[i]!='\0';i++)
+  { 
+      if(num[i]=='.')
+      {
+          test=1;
+          if(num[i+1]=='\0')
+          test=0;
+      }
+  }
+  
+  if(test==1)
+  {printf("valid floating point number\n");}
+  else
+  {printf("invalid floating point number\n");}
+
+
+    return 0;
+}
